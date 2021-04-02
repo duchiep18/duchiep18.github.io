@@ -23,7 +23,7 @@ Route::get('login',function(){
 
 Route::get('login-form', 'LoginController@getFormLogin');
 
-Route::get('login-form-submit', 'LoginController@submitFormLogin');
+Route::get('signup-form-submit', 'SignUpController@submitFormSignUp');
 
 Route::get('cart',function(){
     return view('client.cart-payment.cart');

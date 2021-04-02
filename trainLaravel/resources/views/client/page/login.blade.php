@@ -15,7 +15,7 @@
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in
 							</span>
-							<button type="submit" class="btn btn-default">Login</button>
+							<button type="submit" class="btn btn-default"> Đăng Nhập </button>
 						</form>
 					</div><!--/login form-->
 				</div>
@@ -24,13 +24,14 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
-						<h1>Đăng kí</h1>
-						<form action="login-form-submit" method="GET">
-							<input type="username" placeholder="Username"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
-							<input type="phone" placeholder="Số điện thoại"/>
-							<button type="submit" class="btn btn-default">Signup</button>
+						<h1>Đăng ký</h1>
+						
+						<form action="signup-form-submit" method="GET">
+							<input type="username" name="username" placeholder="Username"/>
+							<input type="email" name="email"placeholder="Email Address"/>
+							<input type="password" name="password" placeholder="Password"/>
+							<input type="phone" name="phone" placeholder="Số điện thoại"/>
+							<button type="submit" class="btn btn-default">Đăng Ký </button>
 						</form>
 					</div><!--/sign up form-->
 				</div>
