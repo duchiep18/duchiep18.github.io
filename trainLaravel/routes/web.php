@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//admin Route
+Route::get('xuepc_admin', function(){
+    return view('admin.layout.admin_master');
+});
 Route::get('home', function() {
     return view('client.page.home');
 });
@@ -23,7 +26,7 @@ Route::get('login',function(){
 
 Route::get('login-form', 'LoginController@getFormLogin');
 
-Route::get('login-form-submit', 'LoginController@submitFormLogin');
+Route::get('signup-form-submit', 'SignUpController@submitFormSignUp');
 
 Route::get('cart',function(){
     return view('client.cart-payment.cart');
