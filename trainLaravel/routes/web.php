@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//admin Route
+Route::get('xuepc_admin', function(){
+    return view('admin.layout.admin_master');
+});
 Route::get('home', function() {
     return view('client.page.home');
 });

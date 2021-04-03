@@ -31,6 +31,9 @@
 							<input type="email" name="email"placeholder="Email Address"/>
 							<input type="password" name="password" placeholder="Password"/>
 							<input type="phone" name="phone" placeholder="Số điện thoại"/>
+							
+							<textarea name="address" id="" class="form-control" rows="8" required="required" placeholder="Địa chỉ..."></textarea> <br>
+							
 							<button type="submit" class="btn btn-default">Đăng Ký </button>
 						</form>
 					</div><!--/sign up form-->
