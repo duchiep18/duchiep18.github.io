@@ -37,7 +37,8 @@
                     
                         <div class="form-group">
                             <label for="">Thông tin sản phẩm:</label>
-                            <input type="text" name="thongtinsanpham" class="form-control" id="" placeholder="">
+                            <textarea name="thongtinsanpham" id="input" class="form-control" rows="10" required="required"></textarea>
+            
                         </div>
                     
                         <div class="form-group">

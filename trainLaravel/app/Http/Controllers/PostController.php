@@ -37,4 +37,11 @@ class PostController extends Controller
         $product->save();
         echo "Insert Product Success";
     }
+
+    public function getProduct(Request $request){
+        $query = themsanpham::query();
+        $product = $query->paginate(6);
+        // $product = themsanpham::paginate(4);
+        return view('client.page.home', compact('product'));
+    }
 }

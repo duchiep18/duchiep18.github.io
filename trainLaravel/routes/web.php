@@ -19,6 +19,8 @@ Route::get('xuepc_admin', function(){
 Route::get('home', function() {
     return view('client.page.home');
 });
+Route::get('home', 'PostController@getProduct');
+
 
 Route::get('login',function(){
     return view('client.page.login');
