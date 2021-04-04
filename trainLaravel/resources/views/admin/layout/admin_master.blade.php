@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+    <title>Welcome To | XuePC Admin Managment</title>
     <!-- Favicon-->
     <link rel="icon" href="/admin-frontend/favicon.ico" type="image/x-icon">
 
@@ -70,7 +70,7 @@
             <div class="navbar-header">
                 <a href="/admin-frontend/javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="/admin-frontend/javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="admin_master.blade.php">ADMINBSB - MATERIAL DESIGN</a>
+                <a class="navbar-brand" href="admin_master.blade.php">XUEPC Store - Admin Managment</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -279,18 +279,18 @@
                     <img src="/admin-frontend/images/user.png" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                    <div class="email">john.doe@example.com</div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Boss</div>
+                    <div class="email">@gmail.com</div>
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                        <ul class="dropdown-menu pull-right ">
+                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">person</i>Thông tin tài khoản</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">group</i>Danh sách khách hàng</a></li>
+                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">shopping_cart</i>Quản lý đơn hàng</a></li>
+                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">star</i>Sản phẩm bán chạy</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">input</i>Đăng xuất </a></li>
                         </ul>
                     </div>
                 </div>
@@ -299,23 +299,23 @@
             <!-- Menu -->
             <div class="menu">
                 <ul class="list">
-                    <li class="header">MAIN NAVIGATION</li>
+                    <li class="header">Danh mục quản lý</li>
                     <li class="active">
                         <a href="admin_master.blade.php">
                             <i class="material-icons">home</i>
-                            <span>Home</span>
+                            <span>Trang chủ</span>
                         </a>
                     </li>
                     <li>
                         <a href="/admin-frontend/pages/typography.html">
-                            <i class="material-icons">text_fields</i>
-                            <span>Typography</span>
+                            <i class="material-icons">assessment</i>
+                            <span>Bảng tin</span>
                         </a>
                     </li>
                     <li>
                         <a href="pages/helper-classes.html">
-                            <i class="material-icons">layers</i>
-                            <span>Helper Classes</span>
+                            <i class="material-icons">fiber_new</i>
+                            <span>Bài viết tin tức</span>
                         </a>
                     </li>
                     <li>
