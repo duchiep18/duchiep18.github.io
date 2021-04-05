@@ -48,6 +48,15 @@
                         </div>
 
                         <div class="form-group">
+                            <label for=""> Ảnh sản phẩm:</label>
+                            <input type="file" name="anhsanpham" id="" >
+                        </div>
+                        <div class="form-group">
+                            <label for=""> Ảnh mô tả sản phẩm:</label>
+                            <input type="file" name="anhsanphamslide" id="" multiple>
+                        </div>
+
+                        <div class="form-group">
                             <label for="">Status:</label>
                              <select name="trang_thai" id="input" class="form-control" required="required">
                                  <option value="1">Còn hàng</option>
