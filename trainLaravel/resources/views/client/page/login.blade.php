@@ -26,7 +26,8 @@
 					<div class="signup-form"><!--sign up form-->
 						<h1>Đăng ký</h1>
 						
-						<form action="signup-form-submit" method="GET">
+						<form action="signup-form-submit" method="POST">
+						@csrf
 							<input type="username" name="username" placeholder="Username"/>
 							<input type="email" name="email"placeholder="Email Address"/>
 							<input type="password" name="password" placeholder="Password"/>

@@ -291,7 +291,8 @@
 												<h2>{{ $addproduct->giasanpham }}</h2>
 												<p>{{ $addproduct->tensanpham }}</p>
 												<p>{{ $addproduct->thongtinsanpham }}</p>
-
+												<p>{{ $addproduct->trang_thai }}</p>
+												
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 										</div>
@@ -305,6 +306,9 @@
 							</div>
 						</div>
 						@endforeach
+						<div style="padding-left:350px">
+							{{$product->appends($_GET)}}      
+						</div>
 					</div><!--features_items-->
 					
 					<div class="category-tab"><!--category-tab-->

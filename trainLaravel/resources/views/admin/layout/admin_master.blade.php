@@ -68,18 +68,18 @@
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="/admin-frontend/javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
-                <a href="/admin-frontend/javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="admin_master.blade.php">XUEPC Store - Admin Managment</a>
+                <a href="#" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="#" class="bars"></a>
+                <a class="navbar-brand" href="xuepc_admin">XUEPC Store - Quản lý trang Web</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Call Search -->
-                    <li><a href="/admin-frontend/javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <li><a href="#" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
                     <!-- #END# Call Search -->
                     <!-- Notifications -->
                     <li class="dropdown">
-                        <a href="/admin-frontend/javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                             <i class="material-icons">notifications</i>
                             <span class="label-count">7</span>
                         </a>
@@ -88,7 +88,7 @@
                             <li class="body">
                                 <ul class="menu">
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <div class="icon-circle bg-light-green">
                                                 <i class="material-icons">person_add</i>
                                             </div>
@@ -101,7 +101,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <div class="icon-circle bg-cyan">
                                                 <i class="material-icons">add_shopping_cart</i>
                                             </div>
@@ -114,7 +114,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <div class="icon-circle bg-red">
                                                 <i class="material-icons">delete_forever</i>
                                             </div>
@@ -127,7 +127,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <div class="icon-circle bg-orange">
                                                 <i class="material-icons">mode_edit</i>
                                             </div>
@@ -140,7 +140,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <div class="icon-circle bg-blue-grey">
                                                 <i class="material-icons">comment</i>
                                             </div>
@@ -153,7 +153,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <div class="icon-circle bg-light-green">
                                                 <i class="material-icons">cached</i>
                                             </div>
@@ -166,7 +166,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <div class="icon-circle bg-purple">
                                                 <i class="material-icons">settings</i>
                                             </div>
@@ -181,14 +181,14 @@
                                 </ul>
                             </li>
                             <li class="footer">
-                                <a href="/admin-frontend/javascript:void(0);">View All Notifications</a>
+                                <a href="#">View All Notifications</a>
                             </li>
                         </ul>
                     </li>
                     <!-- #END# Notifications -->
                     <!-- Tasks -->
                     <li class="dropdown">
-                        <a href="/admin-frontend/javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                             <i class="material-icons">flag</i>
                             <span class="label-count">9</span>
                         </a>
@@ -197,7 +197,7 @@
                             <li class="body">
                                 <ul class="menu tasks">
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <h4>
                                                 Footer display issue
                                                 <small>32%</small>
@@ -209,7 +209,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <h4>
                                                 Make new buttons
                                                 <small>45%</small>
@@ -221,7 +221,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <h4>
                                                 Create new dashboard
                                                 <small>54%</small>
@@ -233,7 +233,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <h4>
                                                 Solve transition issue
                                                 <small>65%</small>
@@ -245,7 +245,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <h4>
                                                 Answer GitHub questions
                                                 <small>92%</small>
@@ -259,12 +259,12 @@
                                 </ul>
                             </li>
                             <li class="footer">
-                                <a href="/admin-frontend/javascript:void(0);">View All Tasks</a>
+                                <a href="#">View All Tasks</a>
                             </li>
                         </ul>
                     </li>
                     <!-- #END# Tasks -->
-                    <li class="pull-right"><a href="/admin-frontend/javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
+                    <li class="pull-right"><a href="#" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
                 </ul>
             </div>
         </div>
@@ -284,13 +284,13 @@
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right ">
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">person</i>Thông tin tài khoản</a></li>
+                            <li><a href="#"><i class="material-icons">person</i>Thông tin tài khoản</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">group</i>Danh sách khách hàng</a></li>
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">shopping_cart</i>Quản lý đơn hàng</a></li>
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">star</i>Sản phẩm bán chạy</a></li>
+                            <li><a href="#"><i class="material-icons">group</i>Danh sách khách hàng</a></li>
+                            <li><a href="#"><i class="material-icons">shopping_cart</i>Quản lý đơn hàng</a></li>
+                            <li><a href="#"><i class="material-icons">star</i>Sản phẩm bán chạy</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="/admin-frontend/javascript:void(0);"><i class="material-icons">input</i>Đăng xuất </a></li>
+                            <li><a href="#"><i class="material-icons">input</i>Đăng xuất </a></li>
                         </ul>
                     </div>
                 </div>
@@ -300,8 +300,8 @@
             <div class="menu">
                 <ul class="list">
                     <li class="header">Danh mục quản lý</li>
-                    <li class="active">
-                        <a href="admin_master.blade.php">
+                    <li>
+                        <a href="xuepc_admin">
                             <i class="material-icons">home</i>
                             <span>Trang chủ</span>
                         </a>
@@ -313,19 +313,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="pages/helper-classes.html">
+                        <a href="/admin-frontend/pages/helper-classes.html">
                             <i class="material-icons">fiber_new</i>
                             <span>Bài viết tin tức</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">widgets</i>
                             <span>Widgets</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                                <a href="#" class="menu-toggle">
                                     <span>Cards</span>
                                 </a>
                                 <ul class="ml-menu">
@@ -341,7 +341,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                                <a href="#" class="menu-toggle">
                                     <span>Infobox</span>
                                 </a>
                                 <ul class="ml-menu">
@@ -365,7 +365,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">swap_calls</i>
                             <span>User Interface (UI)</span>
                         </a>
@@ -443,7 +443,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">assignment</i>
                             <span>Forms</span>
                         </a>
@@ -469,7 +469,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">view_list</i>
                             <span>Tables</span>
                         </a>
@@ -486,7 +486,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">perm_media</i>
                             <span>Medias</span>
                         </a>
@@ -500,7 +500,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">pie_chart</i>
                             <span>Charts</span>
                         </a>
@@ -523,7 +523,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">content_copy</i>
                             <span>Example Pages</span>
                         </a>
@@ -552,7 +552,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">map</i>
                             <span>Maps</span>
                         </a>
@@ -569,38 +569,38 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">trending_down</i>
                             <span>Multi Level Menu</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/admin-frontend/javascript:void(0);">
+                                <a href="#">
                                     <span>Menu Item</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/admin-frontend/javascript:void(0);">
+                                <a href="#">
                                     <span>Menu Item - 2</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                                <a href="#" class="menu-toggle">
                                     <span>Level - 2</span>
                                 </a>
                                 <ul class="ml-menu">
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);">
+                                        <a href="#">
                                             <span>Menu Item</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/admin-frontend/javascript:void(0);" class="menu-toggle">
+                                        <a href="#" class="menu-toggle">
                                             <span>Level - 3</span>
                                         </a>
                                         <ul class="ml-menu">
                                             <li>
-                                                <a href="/admin-frontend/javascript:void(0);">
+                                                <a href="#">
                                                     <span>Level - 4</span>
                                                 </a>
                                             </li>
@@ -618,19 +618,19 @@
                     </li>
                     <li class="header">LABELS</li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);">
+                        <a href="#">
                             <i class="material-icons col-red">donut_large</i>
                             <span>Important</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);">
+                        <a href="#">
                             <i class="material-icons col-amber">donut_large</i>
                             <span>Warning</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/admin-frontend/javascript:void(0);">
+                        <a href="#">
                             <i class="material-icons col-light-blue">donut_large</i>
                             <span>Information</span>
                         </a>
@@ -641,7 +641,7 @@
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2016 - 2017 <a href="/admin-frontend/javascript:void(0);">AdminBSB - Material Design</a>.
+                    &copy; 2016 - 2017 <a href="#">AdminBSB - Material Design</a>.
                 </div>
                 <div class="version">
                     <b>Version: </b> 1.0.5
@@ -867,13 +867,13 @@
                             </div>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
-                                    <a href="/admin-frontend/javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <i class="material-icons">more_vert</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="/admin-frontend/javascript:void(0);">Action</a></li>
-                                        <li><a href="/admin-frontend/javascript:void(0);">Another action</a></li>
-                                        <li><a href="/admin-frontend/javascript:void(0);">Something else here</a></li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -991,13 +991,13 @@
                             <h2>TASK INFOS</h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
-                                    <a href="/admin-frontend/javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <i class="material-icons">more_vert</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="/admin-frontend/javascript:void(0);">Action</a></li>
-                                        <li><a href="/admin-frontend/javascript:void(0);">Another action</a></li>
-                                        <li><a href="/admin-frontend/javascript:void(0);">Something else here</a></li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1086,13 +1086,13 @@
                             <h2>BROWSER USAGE</h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
-                                    <a href="/admin-frontend/javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <i class="material-icons">more_vert</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="/admin-frontend/javascript:void(0);">Action</a></li>
-                                        <li><a href="/admin-frontend/javascript:void(0);">Another action</a></li>
-                                        <li><a href="/admin-frontend/javascript:void(0);">Something else here</a></li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                             </ul>
