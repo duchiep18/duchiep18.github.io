@@ -12,12 +12,13 @@
             <div class="row">
                 <div class="col-md-6">
                     
-                    <form action="{{route('products.storeData')}}" method="POST" role="form">
+                    <form action="{{route('products.update', $product->id)}}" method="POST" role="form">
                         @csrf 
-                        <legend>Create New Product</legend>
+                        @method('put')
+                        <h1>Sửa đổi sản phẩm</h1> <br><br>
                         <div class="form-group">
-                            <label for="">Loại sản phẩm:</label>
-                             <select name="loaisanpham" id="input" class="form-control" required="required">
+                            <label for="">Loại sản phẩm:</label>
+                            <select name="loaisanpham" id="input" class="form-control" required="required">
                                  <option value="1">Chipset-CPU</option>
                                  <option value="2">Mainboard - Bo mạch chủ</option>
                                  <option value="3">VGA - Card đồ họa màn hình</option>
@@ -32,24 +33,24 @@
 
                         <div class="form-group">
                             <label for="">Tên sản phẩm:</label>
-                            <input type="text" name="tensanpham" class="form-control" id="" placeholder="">
+                            <input type="text" value="{{$product->tensanpham}}" name="tensanpham" class="form-control" id="" placeholder="">
                         </div>
                     
                         <div class="form-group">
                             <label for="">Thông tin sản phẩm:</label>
-                            <textarea name="thongtinsanpham" id="input" class="form-control" rows="10" required="required"></textarea>
+                            <textarea name="thongtinsanpham" id="input" class="form-control" rows="10" required="required">{{$product->thongtinsanpham}}</textarea>
             
                         </div>
                     
                         <div class="form-group">
                             <label for="">Giá sản phẩm:</label>
-                            <input type="text" name="giasanpham" class="form-control"  
+                            <input type="text" value="{{$product->giasanpham}}"  name="giasanpham" class="form-control"  
                                id="" placeholder="">
                         </div>
 
                         <div class="form-group">
                             <label for=""> Ảnh sản phẩm:</label>
-                            <input type="file" name="anhsanpham" id="" >
+                            <input type="file" value="{{$product->image}}" name="anhsanpham" id="" >
                         </div>
                         <div class="form-group">
                             <label for=""> Ảnh mô tả sản phẩm:</label>
@@ -66,8 +67,7 @@
                         </div>
 
 
-                        <button type="submit" class="btn btn-primary">Create New Product</button>
-                    </form>
+                        <button type="submit" class="btn btn-primary">Update sản phẩm</button>
                         
                 </div>
             
