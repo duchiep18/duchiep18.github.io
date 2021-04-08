@@ -3,47 +3,90 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\themsanpham;
+use App\Models\News;
 
 
 class PostController extends Controller
 {
-    //tìm kiếm, đổ dl ra trang qly
-    public function index(Request $request){
-        $keywordsearch = $request->input('keywordsearch');
-        $query = themsanpham::query();
-        if($keywordsearch){
-            $query->where('tensanpham', 'like', "%{$keywordsearch}%");
-        }
-        $product = $query->paginate(5);
-        // $product = themsanpham::paginate(4);
-        return view('posts.index', compact('product'));
+    
+     //fumction News List
+     public function index(){
+        return view('admin.pages_danh_muc.NewsPages.news_list');
     }
-    //đổ dl ra web
-    public function getProduct(Request $request){
-        $query = themsanpham::query();
-        $product = $query->paginate(6);
-        // $product = themsanpham::paginate(4);
-        return view('client.page.home', compact('product'));
-    }
+
 
     public function create(){
-        return view('posts.create');
+        return view('admin.pages_danh_muc.NewsPages.createNews');
     }
 
-    
+    public function getNews(Request $request){
+        $query =News::query();
+        $news = $query->paginate(5);
+        // $news = posts::paginate(4);
+        return view('admin.pages_danh_muc.NewsPages.news_list', compact('news'));
+    }
+
     public function storeData(Request $request){
-        $tensanpham = $request->input('tensanpham');
-        $thongtinsanpham = $request->input('thongtinsanpham');
-        $giasanpham = $request->input('giasanpham');
-        $trang_thai = $request->input('trang_thai');
-        $product = new themsanpham;
-        $product->tensanpham = $tensanpham;
-        $product->thongtinsanpham = $thongtinsanpham;
-        $product->giasanpham = $giasanpham;
-        $product->trang_thai = $trang_thai;
-        $product->save();
-        echo "Insert Product Success";
+        $id = $request -> input('id');
+        $category_id = $request -> input('loaitintuc');
+        $title = $request -> input('tenbaiviet');
+        $description = $request -> input('motabaiviet');
+        $content = $request -> input('noidungbaiviet');
+        $image = $request -> input('anhbaiviet');
+        $status = $request -> input('trang_thai');
+        $created_at = $request -> input('created_at');
+        $updated_at = $request -> input('updated_at');
+        $new = new News;
+        $new->id = $id;
+        $new->title = $title;
+        $new->category_id = $category_id;
+        $new->description = $description;
+        $new->content = $content;
+        $new->image = $image;
+        $new->status = $status;
+        $new->created_at = $created_at;
+        $new->updated_at = $updated_at;
+        $new->save();
+
+        return redirect()->route('news.index');
+    }
+
+    public function edit($id){
+        $new = News::find($id);
+        return view ('admin.pages_danh_muc.NewsPages.editNews', compact('new'));
+    }
+
+    public function update($id, Request $request)
+
+    {
+        $newupdate = News::find($id);
+        $category_id = $request -> input('loaitintuc');
+        $title = $request -> input('tenbaiviet');
+        $description = $request -> input('motabaiviet');
+        $content = $request -> input('noidungbaiviet');
+        $image = $request -> input('anhbaiviet');
+        $status = $request -> input('trang_thai');
+        $created_at = $request -> input('created_at');
+        $updated_at = $request -> input('updated_at');
+      
+        $newupdate->category_id = $category_id;
+        $newupdate->title = $title;
+        $newupdate->description = $description;
+        $newupdate->content = $content;
+        $newupdate->image = $image;
+        $newupdate->status = $status;
+        $newupdate->created_at = $created_at;
+        $newupdate->updated_at = $updated_at;
+        $newupdate->save();
+        return redirect()->route('news.index');
+
+    }
+
+    public function destroy($id)
+    {
+        $newdelete = News::find($id);
+        $newdelete->delete();
+        return redirect()->route('news.index');    
     }
 
 }

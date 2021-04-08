@@ -17,8 +17,7 @@
                     <h1>Danh sách sản phẩm</h1>
                     <a href="{{route ('posts.create')}}" class="btn btn-primary">Create Product</a>
                 <table class="table table-hover">
-
-                    
+ 
                     <form action="" method="GET" class="form-inline" role="form">
                     
                         <div class="form-group">

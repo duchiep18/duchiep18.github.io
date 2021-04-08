@@ -1,6 +1,7 @@
 create database XuePC;
 use XuePC;
 
+
 show tables;
 
 

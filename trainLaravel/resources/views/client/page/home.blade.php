@@ -281,15 +281,16 @@
 								<div class="single-products">
 										<div class="productinfo text-center">
 											<img src="/frontend/images/product XuePC/màn-philips-241v8-24-FHD-75hz.jpg" alt="" />
-											<h2>{{ $addproduct->giasanpham}}</h2>
 											<p>{{ $addproduct->tensanpham }}</p>
-
+											<h2>{{ $addproduct->giasanpham}}</h2>
+											<p>{{ $addproduct->trang_thai }}</p>
+													
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<h2>{{ $addproduct->giasanpham }}</h2>
 												<p>{{ $addproduct->tensanpham }}</p>
+												<h2>{{ $addproduct->giasanpham }}</h2>
 												<p>{{ $addproduct->thongtinsanpham }}</p>
 												<p>{{ $addproduct->trang_thai }}</p>
 												

@@ -13,15 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //admin Route
-Route::get('xuepc_admin', function(){
-    return view('admin.layout.admin_master');
-});
+//Route Admin Dashboard
+    Route::get('xuepc_admin', function(){
+        return view('admin.layout.admin_master');
+    });
+    //Route NewS 
+    Route::get ('news/index', 'PostController@getNews')->name('news.index');
+    Route::get('/news/create', 'PostController@create')->name('news.create');
+    Route::post('/news', 'PostController@storeData')->name('news.storeData');
+
+    Route::get('news/{id}/edit', 'PostController@edit')->name('news.edit');
+    Route::put('news/{id}', 'PostController@update')->name('news.update');
+    Route::delete('news/{id}', 'PostController@destroy')->name('news.destroy');
+
+    //Route Product
+    Route::get ('products.index', 'ProductController@getProduct_admin')->name('products.index');
+    Route::get ('products/create','ProductController@create')->name('products.create');
+    Route::post('products', 'ProductController@storeData')->name('products.storeData');
+
+    Route::get('products/{id}/edit', 'ProductController@edit')->name('products.edit');
+    Route::put('products/{id}', 'ProductController@update')->name('products.update');
+    Route::delete('products/{id}', 'ProductController@destroy')->name('products.destroy');
+//End Route Admin
+
+//Route Home page
 Route::get('home', function() {
     return view('client.page.home');
 });
-Route::get('home', 'PostController@getProduct');
 
-
+//Route Login, SignUp
 Route::get('login',function(){
     return view('client.page.login');
 });
@@ -29,10 +49,19 @@ Route::get('login',function(){
 Route::get('login-form', 'LoginController@getFormLogin');
 
 Route::post('signup-form-submit', 'SignUpController@submitFormSignUp');
+//Route Product
+Route::get('home', 'ProductController@getProduct');
 
+//Route Shop
+Route::get('/shop',function(){
+    return view('client.products.ShopProducts');
+});
+
+//Route cart
 Route::get('cart',function(){
     return view('client.cart-payment.cart');
 });
+
 Route::get('checkout',function(){
     return view('client.cart-payment.checkout'); 
 });
@@ -40,21 +69,12 @@ Route::get('contact_us',function(){
     return view('client.page.contactus');
 });
 
-Route::get('/products',function(){
-    return view('client.products.ProductDetails');
-});
-
-Route::get('/shop',function(){
-    return view('client.products.ShopProducts');
-});
 
 Route::get('/posts', function () {
     return view('posts.index');
 });
 
-Route::get('/posts', 'PostController@index');
-Route::get('/posts/create', 'PostController@create')->name('posts.create');
-Route::post('/posts', 'PostController@storeData')->name('posts.storeData');
+
 
 Route::get('/calculator','CalculatorController@getFormCalculator');
 Route::post('/calculator','CalculatorController@storeDataFormCalculate')->name('calculator.calculate');
