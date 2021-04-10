@@ -1,30 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+@extends('admin.layout.admin_master')
 
-</head>
-<body>
+@section('content')
+    <section class="content">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     
                     <form action="{{route('news.storeData')}}" method="POST" role="form">
-                        @csrf 
+                        @csrf  
                         <h1>Thêm tin mới</h1> <br>
+                       
                         <div class="form-group">
-                            <label for="">Loại trang tin</label>
-                             <select name="loaitintuc" id="input" class="form-control" required="required">
+                            <label for="input" class="col-sm-2 control-label">Loại trang tin:</label>
+                            <div class="col-sm-12">
+                            <select name="loaitintuc" id="input" class="form-control" required="required">
                                  <option value="1">Tin tức</option>
                                  <option value="2">Bài viết review sản phẩm, công nghệ</option>
-                                 <option value="3">Các mẹo về đồ công nghệ hay</option>
-                                 
+                                 <option value="3">Các mẹo về đồ công nghệ hay</option>                                
                              </select>
-                             
+                            </div>
                         </div>
+                        <br>
 
                         <div class="form-group">
                             <label for="">Tên bài viết:</label>
@@ -72,5 +68,7 @@
     <!-- Latest compiled and minified CSS & JS -->
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-</body>
-</html>
+
+</section>
+
+@stop

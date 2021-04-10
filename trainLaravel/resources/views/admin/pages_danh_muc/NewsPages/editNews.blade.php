@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+@extends('admin.layout.admin_master')
 
-</head>
-<body>
+@section('content')
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -15,7 +8,7 @@
                     <form action="{{route('news.update', $new->id)}}" method="POST" role="form">
                         @csrf 
                         @method('put')
-                        <h1>Sửa đổi bài viết</h1> <br><br>
+                        <h1 >Sửa đổi bài viết</h1> <br><br>
                         <div class="form-group">
                             <label for="">Loại trang tin</label>
                              <select name="loaitintuc" id="input" class="form-control" required="required">
@@ -23,11 +16,9 @@
                                  <option value="1">Tin tức</option>
                                  <option value="2">Bài viết review sản phẩm, công nghệ</option>
                                  <option value="3">Các mẹo về đồ công nghệ hay</option>                                
-                                 
                              </select>
-                             
                         </div>
-
+                        <br>
                         <div class="form-group">
                             <label for="">Tên bài viết:</label>
                             <input type="text" value="{{$new->title}}" name="tenbaiviet" class="form-control" id="" placeholder="">
@@ -76,3 +67,5 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+@stop

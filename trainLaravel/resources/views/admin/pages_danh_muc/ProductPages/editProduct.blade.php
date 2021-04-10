@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+@extends('admin.layout.admin_master')
 
-</head>
-<body>
-        <div class="container">
+
+@section('content')
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
                     
@@ -68,6 +62,7 @@
 
 
                         <button type="submit" class="btn btn-primary">Update sản phẩm</button>
+                    </form>
                         
                 </div>
             
@@ -80,3 +75,5 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+@stop

@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+@extends('admin.layout.admin_master')
 
-</head>
-<body>
+@section('content')
+
+    <section class="content">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     
                     <form action="{{route('products.storeData')}}" method="POST" role="form">
                         @csrf 
-                        <legend>Create New Product</legend>
+                        <h1 style="text-align:center">Thêm sản phẩm mới</h1>
                         <div class="form-group">
                             <label for="">Loại sản phẩm:</label>
                              <select name="loaisanpham" id="input" class="form-control" required="required">
@@ -27,7 +22,7 @@
                                  <option value="7">Monitor - Màn hình máy tính</option>
                                  <option value="8">Case - Vỏ máy tính</option>
                              </select>
-                             
+
                         </div>
 
                         <div class="form-group">
@@ -62,7 +57,6 @@
                                  <option value="1">Còn hàng</option>
                                  <option value="2">Hết hàng</option>
                              </select>
-                             
                         </div>
 
 
@@ -78,5 +72,6 @@
     <!-- Latest compiled and minified CSS & JS -->
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-</body>
-</html>
+</section>
+
+@stop

@@ -15,25 +15,25 @@ use Illuminate\Support\Facades\Route;
 //admin Route
 //Route Admin Dashboard
     Route::get('xuepc_admin', function(){
-        return view('admin.layout.admin_master');
+        return view('admin.layout.home_admin');
     });
     //Route NewS 
-    Route::get ('news/index', 'PostController@getNews')->name('news.index');
-    Route::get('/news/create', 'PostController@create')->name('news.create');
+    Route::get ('/news.index', 'PostController@getNews')->name('news.index');
+    Route::get('/news.create', 'PostController@create')->name('news.create');
     Route::post('/news', 'PostController@storeData')->name('news.storeData');
 
-    Route::get('news/{id}/edit', 'PostController@edit')->name('news.edit');
-    Route::put('news/{id}', 'PostController@update')->name('news.update');
-    Route::delete('news/{id}', 'PostController@destroy')->name('news.destroy');
+    Route::get('/news/{id}/edit', 'PostController@edit')->name('news.edit');
+    Route::put('/news/{id}', 'PostController@update')->name('news.update');
+    Route::delete('/news/{id}', 'PostController@destroy')->name('news.destroy');
 
     //Route Product
-    Route::get ('products.index', 'ProductController@getProduct_admin')->name('products.index');
-    Route::get ('products/create','ProductController@create')->name('products.create');
-    Route::post('products', 'ProductController@storeData')->name('products.storeData');
+    Route::get ('/products.index', 'ProductController@getProduct_admin')->name('products.index');
+    Route::get ('/products.create','ProductController@create')->name('products.create');
+    Route::post('/products', 'ProductController@storeData')->name('products.storeData');
 
-    Route::get('products/{id}/edit', 'ProductController@edit')->name('products.edit');
-    Route::put('products/{id}', 'ProductController@update')->name('products.update');
-    Route::delete('products/{id}', 'ProductController@destroy')->name('products.destroy');
+    Route::get('/products/{id}/edit', 'ProductController@edit')->name('products.edit');
+    Route::put('/products/{id}', 'ProductController@update')->name('products.update');
+    Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
 //End Route Admin
 
 //Route Home page
