@@ -74,7 +74,10 @@ Route::get('/posts', function () {
     return view('posts.index');
 });
 
+Route::get ('/demo', function(){
 
+    return view('admin.pages_danh_muc.ProductPages.demo');
+});
 
 Route::get('/calculator','CalculatorController@getFormCalculator');
 Route::post('/calculator','CalculatorController@storeDataFormCalculate')->name('calculator.calculate');

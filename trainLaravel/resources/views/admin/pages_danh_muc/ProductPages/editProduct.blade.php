@@ -2,6 +2,7 @@
 
 
 @section('content')
+    <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
@@ -69,11 +70,8 @@
             </div>
         
         </div>
-    
-    <!-- Latest compiled and minified CSS & JS -->
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-</body>
-</html>
+        </section>
+
+
 
 @stop

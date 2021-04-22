@@ -1,6 +1,7 @@
 @extends('admin.layout.admin_master')
 
 @section('content')
+    <section class="content">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -30,6 +31,8 @@
                             <textarea name="motabaiviet" value="{{$new->description}}" id="input" class="form-control" rows="3" required="required">{{$new->description}}</textarea>
                             
                         </div>
+
+                        
                     
                         <div class="form-group">
                             <label for="">Nội dung bài viết:</label>
@@ -67,5 +70,5 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
-
+</section>
 @stop

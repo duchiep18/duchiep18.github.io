@@ -2,9 +2,8 @@
 
 
 @section('content')
-
     <section class="content">
-    <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
 
@@ -81,49 +80,7 @@
 		})
 	</script>
     
-    <script src="//code.jquery.com/jquery.js"></script>
-    
-    <!-- Jquery Core Js -->
-    
-    <!-- Bootstrap Core Js -->
-    <script src="/admin-frontend/plugins/bootstrap/js/bootstrap.js"></script>
-    
-    <!-- Select Plugin Js -->
-    <script src="/admin-frontend/plugins/bootstrap-select/js/bootstrap-select.js"></script>
-    
-    <!-- Slimscroll Plugin Js -->
-    <script src="/admin-frontend/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
-    
-    <!-- Waves Effect Plugin Js -->
-    <script src="/admin-frontend/plugins/node-waves/waves.js"></script>
-    
-    <!-- Jquery CountTo Plugin Js -->
-    <script src="/admin-frontend/plugins/jquery-countto/jquery.countTo.js"></script>
-    
-    <!-- Morris Plugin Js -->
-    <script src="/admin-frontend/plugins/raphael/raphael.min.js"></script>
-    <script src="/admin-frontend/plugins/morrisjs/morris.js"></script>
-    
-    <!-- ChartJs -->
-    <script src="/admin-frontend/plugins/chartjs/Chart.bundle.js"></script>
-    
-    <!-- Flot Charts Plugin Js -->
-    <script src="/admin-frontend/plugins/flot-charts/jquery.flot.js"></script>
-    <script src="/admin-frontend/plugins/flot-charts/jquery.flot.resize.js"></script>
-    <script src="/admin-frontend/plugins/flot-charts/jquery.flot.pie.js"></script>
-    <script src="/admin-frontend/plugins/flot-charts/jquery.flot.categories.js"></script>
-    <script src="/admin-frontend/plugins/flot-charts/jquery.flot.time.js"></script>
-    
-    <!-- Sparkline Chart Plugin Js -->
-    <script src="/admin-frontend/plugins/jquery-sparkline/jquery.sparkline.js"></script>
-    
-    <!-- Custom Js -->
-    <script src="/admin-frontend/js/admin.js"></script>
-    <script src="/admin-frontend/js/pages/index.js"></script>
-    
-    <!-- Demo Js -->
-    <script src="/admin-frontend/js/demo.js"></script>
-
+   
     
 </body>
 </html>
