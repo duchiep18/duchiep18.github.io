@@ -1,16 +1,15 @@
 @extends('admin.layout.admin_master')
 
-
 @section('content')
     <section class="content">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-10">
                     
                     <form action="{{route('products.update', $product->id)}}" method="POST" role="form">
                         @csrf 
                         @method('put')
-                        <h1>Sửa đổi sản phẩm</h1> <br><br>
+                        <h1 style="text-align:center">Sửa đổi sản phẩm</h1> <br><br>
                         <div class="form-group">
                             <label for="">Loại sản phẩm:</label>
                             <select name="loaisanpham" id="input" class="form-control" required="required">
@@ -23,7 +22,6 @@
                                  <option value="7">Monitor - Màn hình máy tính</option>
                                  <option value="8">Case - Vỏ máy tính</option>
                              </select>
-                             
                         </div>
 
                         <div class="form-group">
@@ -61,7 +59,6 @@
                              
                         </div>
 
-
                         <button type="submit" class="btn btn-primary">Update sản phẩm</button>
                     </form>
                         
@@ -70,8 +67,6 @@
             </div>
         
         </div>
-        </section>
-
-
+    </section>
 
 @stop

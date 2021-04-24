@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Route;
     Route::get ('/news.index', 'PostController@getNews')->name('news.index');
     Route::get('/news.create', 'PostController@create')->name('news.create');
     Route::post('/news', 'PostController@storeData')->name('news.storeData');
-
     Route::get('/news/{id}/edit', 'PostController@edit')->name('news.edit');
     Route::put('/news/{id}', 'PostController@update')->name('news.update');
     Route::delete('/news/{id}', 'PostController@destroy')->name('news.destroy');
@@ -30,7 +29,6 @@ use Illuminate\Support\Facades\Route;
     Route::get ('/products.index', 'ProductController@getProduct_admin')->name('products.index');
     Route::get ('/products.create','ProductController@create')->name('products.create');
     Route::post('/products', 'ProductController@storeData')->name('products.storeData');
-
     Route::get('/products/{id}/edit', 'ProductController@edit')->name('products.edit');
     Route::put('/products/{id}', 'ProductController@update')->name('products.update');
     Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
