@@ -47,7 +47,7 @@
                                 <td> {{$addproduct->updated_at}} </td>
                                 <td> 
                                 <a href="{{route('products.edit', $addproduct->id)}}" class="btn btn-primary">Edit</a> 
-                                <form  action="#" method="POST">
+                                <form action="#" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger btn-delete" type="button">Delete</button>

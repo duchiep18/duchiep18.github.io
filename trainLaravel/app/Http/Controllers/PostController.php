@@ -38,8 +38,8 @@ class PostController extends Controller
         $updated_at = $request -> input('updated_at');
         $new = new News;
         $new->id = $id;
-        $new->title = $title;
         $new->category_id = $category_id;
+        $new->title = $title;
         $new->description = $description;
         $new->content = $content;
         $new->image = $image;
@@ -57,7 +57,6 @@ class PostController extends Controller
     }
 
     public function update($id, Request $request)
-
     {
         $newupdate = News::find($id);
         $category_id = $request -> input('loaitintuc');
@@ -79,7 +78,6 @@ class PostController extends Controller
         $newupdate->updated_at = $updated_at;
         $newupdate->save();
         return redirect()->route('news.index');
-
     }
 
     public function destroy($id)

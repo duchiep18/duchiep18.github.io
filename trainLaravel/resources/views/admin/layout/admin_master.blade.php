@@ -9,35 +9,35 @@
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href="admin-frontend/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ asset('admin-frontend/plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
-    <link href="admin-frontend/plugins/node-waves/waves.css" rel="stylesheet" />
+    <link href="{{ asset('admin-frontend/plugins/node-waves/waves.css')}}" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="admin-frontend/plugins/animate-css/animate.css" rel="stylesheet" />
+    <link href="{{ asset('admin-frontend/plugins/animate-css/animate.css')}}" rel="stylesheet" />
 
     <!-- Bootstrap Material Datetime Picker Css -->
-    <link href="admin-frontend/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+    <link href="{{ asset('admin-frontend/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}" rel="stylesheet" />
 
     <!-- Bootstrap DatePicker Css -->
-    <link href="admin-frontend/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="{{ asset('admin-frontend/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css')}}" rel="stylesheet" />
 
     <!-- Wait Me Css -->
-    <link href="admin-frontend/plugins/waitme/waitMe.css" rel="stylesheet" />
+    <link href="{{ asset('admin-frontend/plugins/waitme/waitMe.css')}}" rel="stylesheet" />
 
     <!-- Bootstrap Select Css -->
-    <link href="admin-frontend/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="{{ asset('admin-frontend/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
 
     <!-- Custom Css -->
-    <link href="admin-frontend/css/style.css" rel="stylesheet">
+    <link href="{{ asset('admin-frontend/css/style.css')}}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="admin-frontend/css/themes/all-themes.css" rel="stylesheet" />
+    <link href="{{ asset('admin-frontend/css/themes/all-themes.css')}}" rel="stylesheet" />
 </head>
 
 <body class="theme-red">
@@ -728,46 +728,46 @@
 
 @yield('content')
 <!-- Jquery Core Js -->
-<script src="/admin-frontend/plugins/jquery/jquery.min.js"></script>
+<script src="{{asset('admin-frontend/plugins/jquery/jquery.min.js')}}"></script>
 
 <!-- Bootstrap Core Js -->
-<script src="/admin-frontend/plugins/bootstrap/js/bootstrap.js"></script>
+<script src="{{asset('admin-frontend/plugins/bootstrap/js/bootstrap.js')}}"></script>
 
 <!-- Select Plugin Js -->
-<script src="/admin-frontend/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+<script src="{{asset('admin-frontend/plugins/bootstrap-select/js/bootstrap-select.js')}}"></script>
 
 <!-- Slimscroll Plugin Js -->
-<script src="/admin-frontend/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="{{asset('admin-frontend/plugins/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
 
 <!-- Waves Effect Plugin Js -->
-<script src="/admin-frontend/plugins/node-waves/waves.js"></script>
+<script src="{{asset('admin-frontend/plugins/node-waves/waves.js')}}"></script>
 
 <!-- Jquery CountTo Plugin Js -->
-<script src="/admin-frontend/plugins/jquery-countto/jquery.countTo.js"></script>
+<script src="{{asset('admin-frontend/plugins/jquery-countto/jquery.countTo.js')}}"></script>
 
 <!-- Morris Plugin Js -->
-<script src="/admin-frontend/plugins/raphael/raphael.min.js"></script>
-<script src="/admin-frontend/plugins/morrisjs/morris.js"></script>
+<script src="{{asset('admin-frontend/plugins/raphael/raphael.min.js')}}"></script>
+<script src="{{asset('admin-frontend/plugins/morrisjs/morris.js')}}"></script>
 
 <!-- ChartJs -->
-<script src="/admin-frontend/plugins/chartjs/Chart.bundle.js"></script>
+<script src="{{asset('admin-frontend/plugins/chartjs/Chart.bundle.js')}}"></script>
 
 <!-- Flot Charts Plugin Js -->
-<script src="/admin-frontend/plugins/flot-charts/jquery.flot.js"></script>
-<script src="/admin-frontend/plugins/flot-charts/jquery.flot.resize.js"></script>
-<script src="/admin-frontend/plugins/flot-charts/jquery.flot.pie.js"></script>
-<script src="/admin-frontend/plugins/flot-charts/jquery.flot.categories.js"></script>
-<script src="/admin-frontend/plugins/flot-charts/jquery.flot.time.js"></script>
+<script src="{{asset('admin-frontend/plugins/flot-charts/jquery.flot.js')}}"></script>
+<script src="{{asset('admin-frontend/plugins/flot-charts/jquery.flot.resize.js')}}"></script>
+<script src="{{asset('admin-frontend/plugins/flot-charts/jquery.flot.pie.js')}}"></script>
+<script src="{{asset('admin-frontend/plugins/flot-charts/jquery.flot.categories.js')}}"></script>
+<script src="{{asset('admin-frontend/plugins/flot-charts/jquery.flot.time.js')}}"></script>
 
 <!-- Sparkline Chart Plugin Js -->
-<script src="/admin-frontend/plugins/jquery-sparkline/jquery.sparkline.js"></script>
+<script src="{{asset('admin-frontend/plugins/jquery-sparkline/jquery.sparkline.js')}}"></script>
 
 <!-- Custom Js -->
-<script src="/admin-frontend/js/admin.js"></script>
-<script src="/admin-frontend/js/pages/index.js"></script>
+<script src="{{asset('admin-frontend/js/admin.js')}}"></script>
+<script src="{{asset('admin-frontend/js/pages/index.js')}}"></script>
 
 <!-- Demo Js -->
-<script src="/admin-frontend/js/demo.js"></script>
-</body>
+<script src="{{asset('admin-frontend/js/demo.js')}}"></script>
 
+</body>
 </html>

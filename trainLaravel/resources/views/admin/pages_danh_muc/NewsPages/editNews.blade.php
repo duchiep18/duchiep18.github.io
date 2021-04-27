@@ -5,7 +5,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10">
-                    
                     <form action="{{route('news.update', $new->id)}}" method="POST" role="form">
                         @csrf 
                         @method('put')
@@ -38,7 +37,6 @@
                         <div class="form-group">
                             <label for="">Nội dung bài viết:</label>
                             <textarea name="noidungbaiviet" id="input" class="form-control" rows="10" required="required">{{$new->content}}</textarea>
-            
                         </div>
                         
                         <div class="form-group">
@@ -54,7 +52,7 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
                     </form>
                         
                 </div>
@@ -63,5 +61,6 @@
         
         </div>
 
-</section>
+    </section>
+    
 @stop

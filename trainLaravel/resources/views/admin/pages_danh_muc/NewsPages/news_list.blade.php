@@ -47,9 +47,8 @@
                                 <td> {{$addnew->updated_at}} </td>
                                 <td> 
                                 <a href="{{route('news.edit', $addnew->id)}}" class="btn btn-primary">Edit</a> 
-                                <form  action="{{route('news.destroy', $addnew->id)}}" method="POST">
+                                <form  action="" method="POST">
                                     @csrf
-                                    @method('delete')
                                     <button class="btn btn-danger btn-delete" type="submit">Delete</button>
                                 </form>
                                 
@@ -66,21 +65,16 @@
             </div>
         </div>
 
+        
+        <script>
+            $(document).ready(function () {
+                $('.btn-delete').click(function () {
+                    let isDelete = confirm('Sếp có muốn xóa bản ghi này hay không?');
+                    console.log(isDelete)
+                });
+            })
+	    </script>
     </section>
-
-    
-     <script>
-		$(document).ready(function () {
-			$('.btn-delete').click(function () {
-				let isDelete = confirm('Sếp có muốn xóa bản ghi này hay không?');
-				if (isDelete) {
-					$(this).parents('form').submit();
-				}
-			});
-		})
-	</script>
-    
-   
     
 </body>
 </html>

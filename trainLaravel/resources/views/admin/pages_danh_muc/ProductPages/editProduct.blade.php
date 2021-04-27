@@ -1,7 +1,8 @@
 @extends('admin.layout.admin_master')
 
 @section('content')
-    <section class="content">
+
+<section class="content">
         <div class="container">
             <div class="row">
                 <div class="col-md-10">
@@ -9,7 +10,7 @@
                     <form action="{{route('products.update', $product->id)}}" method="POST" role="form">
                         @csrf 
                         @method('put')
-                        <h1 style="text-align:center">Sửa đổi sản phẩm</h1> <br><br>
+                        <h1 style="text-align:center">Tạo sản phẩm mới</h1> <br><br>
                         <div class="form-group">
                             <label for="">Loại sản phẩm:</label>
                             <select name="loaisanpham" id="input" class="form-control" required="required">
@@ -37,18 +38,14 @@
                     
                         <div class="form-group">
                             <label for="">Giá sản phẩm:</label>
-                            <input type="text" value="{{$product->giasanpham}}"  name="giasanpham" class="form-control"  
-                               id="" placeholder="">
+                            <input type="text" value="{{$product->giasanpham}}"  name="giasanpham" class="form-control"  id="" placeholder="">
                         </div>
 
                         <div class="form-group">
                             <label for=""> Ảnh sản phẩm:</label>
-                            <input type="file" value="{{$product->image}}" name="anhsanpham" id="" >
+                            <img src="{{$product->image}}" alt="">
                         </div>
-                        <div class="form-group">
-                            <label for=""> Ảnh mô tả sản phẩm:</label>
-                            <input type="file" name="anhsanphamslide" id="" multiple>
-                        </div>
+                        
 
                         <div class="form-group">
                             <label for="">Status:</label>
@@ -56,10 +53,9 @@
                                  <option value="1">Còn hàng</option>
                                  <option value="2">Hết hàng</option>
                              </select>
-                             
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Update sản phẩm</button>
+                        <button type="submit" class="btn btn-primary">Cập nhật sản phẩm<button>
                     </form>
                         
                 </div>
