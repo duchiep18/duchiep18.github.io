@@ -45,13 +45,14 @@
                                 <td> {{$addnew->status}} </td>
                                 <td> {{$addnew->created_at}} </td>
                                 <td> {{$addnew->updated_at}} </td>
+
                                 <td> 
-                                <a href="{{route('news.edit', $addnew->id)}}" class="btn btn-primary">Edit</a> 
-                                <form  action="" method="POST">
-                                    @csrf
-                                    <button class="btn btn-danger btn-delete" type="submit">Delete</button>
-                                </form>
-                                
+                                    <a href="{{route('news.edit', $addnew->id)}}" class="btn btn-primary">Edit</a> 
+                                    <form class="" action="{{route('news.destroy', $addnew->id)}}" method="POST">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="btn btn-danger btn-delete" type="submit">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
@@ -64,19 +65,23 @@
                 </div>
             </div>
         </div>
-
         
-        <script>
-            $(document).ready(function () {
-                $('.btn-delete').click(function () {
-                    let isDelete = confirm('Sếp có muốn xóa bản ghi này hay không?');
-                    console.log(isDelete)
-                });
-            })
-	    </script>
+            <!-- Latest compiled and minified CSS & JS -->
+            <script src="//code.jquery.com/jquery.js"></script>
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>   
+            <script>
+                $(document).ready(function () {
+                    $('.btn-delete').click(function () {
+                        event.preventDefault();
+                        let isDelete = confirm('Sếp có muốn xóa bài viết này hay không?');
+                        if (isDelete) {
+                            $(this).parents('form').submit();
+                        }
+                    });
+                })
+            </script>
+            
     </section>
-    
-</body>
-</html>
-
+  
 @stop
+          

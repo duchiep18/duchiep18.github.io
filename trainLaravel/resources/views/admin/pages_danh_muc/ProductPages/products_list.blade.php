@@ -47,26 +47,38 @@
                                 <td> {{$addproduct->updated_at}} </td>
                                 <td> 
                                 <a href="{{route('products.edit', $addproduct->id)}}" class="btn btn-primary">Edit</a> 
-                                <form action="#" method="POST">
+                                <form action="{{route('products.destroy', $addproduct->id)}}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger btn-delete" type="button">Delete</button>
                                 </form>
-                                
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                         </table>
-
                    
                     <div style="padding-left:450px">
 							{{$product->appends($_GET)}}      
-						</div>
+					</div>
                 </div>
             </div>
         </div>
-       
+          <!-- Latest compiled and minified CSS & JS -->
+            <script src="//code.jquery.com/jquery.js"></script>
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>   
+            <script>
+                $(document).ready(function() {
+                    $('.btn-delete').click(function() {
+                        event.preventDefault();
+                        let isDelete = confirm('Sếp có muốn xóa sản phẩm này hay không?');
+                        if (isDelete) {
+                            $(this).parents('form').submit();
+                        }
+                    });
+                })
+            </script>
+            
     </section>
 
    

@@ -76,9 +76,14 @@ class ProductController extends Controller
         $product->save();
         
         return redirect()->route('products.index');
-
     }
    
+    public function destroy($id){
+        $productdelete = themsanpham::find($id);
+        $productdelete->delete();
+
+        return redirect()->route('products.index');
+    }
     
     
 }
