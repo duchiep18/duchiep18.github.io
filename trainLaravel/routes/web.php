@@ -79,3 +79,18 @@ Route::get ('/demo', function(){
 
 Route::get('/calculator','CalculatorController@getFormCalculator');
 Route::post('/calculator','CalculatorController@storeDataFormCalculate')->name('calculator.calculate');
+
+Route::get('fake_du_lieu_news', function(){
+    for ($i=0; $i < 113 ; $i++) { 
+        $new = new \App\Models\News;
+        $new->title = 'Tất tần tật về siêu phẩm Intel thế hệ thứ 10';
+        $new->description = 'Review siêu phẩm Intel Core i3 10100f';
+        $new->content = 'Intel Core i3 thế hệ thứ 8 có thông số 4 nhân 4 luồng, cho tốc độ xung nhịp lên tới 4GHz, giúp máy tính của bạn làm được nhiều việc, xử lý nhiều tác vụ cùng một lúc, Cùng với 8MB Smart cache đã góp phần nâng cao sức mạnh xử lý. 
+        Ngoài ra một số phiên bản Core i3 thế hệ thứ 8 còn được trang bị công nghệ Intel Turbo Boost thường thấy ở các dòng i5, i7 (ở tác vụ thông thường sẽ chạy tốc độ thấp để tiết kiệm pin và tăng xung nhịp xử lý ở các tác vụ nặng).
+        Và đặc biệt, trong lần ra mắt gần đây, Intel đã cho thấy những bộ vi xử lý Core I3 của họ có khả năng tạo nên nhiều sự khác biệt. Core i3 thế hệ thứ 10 sẽ có 4 nhân 8 luồng tương đương sức mạnh của dòng Core i7 thế hệ thứ 7. Các vi xử lý mới đạt
+        tốc độ xung nhịp cao hơn hờ các công nghệ mới như Turbo Boost 3.0, siêu phân luồng HyperThreading và Thermal Velocity Boost giúp CPU đạt được mức xung nhịp vô cùng ấn tượng nếu điều kiện cho phép.';
+        $new->created_at;
+        $new->updated_at;
+        $new->save();
+    }
+});

@@ -74,7 +74,7 @@ class PostController extends Controller
         $newupdate->content = $content;
         $newupdate->image = $image;
         $newupdate->status = $status;
-        $newupdate->created_at = $created_at;
+        $newupdate->created_at = $created_at; 
         $newupdate->updated_at = $updated_at;
         $newupdate->save();
         return redirect()->route('news.index');

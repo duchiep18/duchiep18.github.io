@@ -21,15 +21,15 @@
                    <table class="table table-striped table-dark">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col"> id </th>
-                                <th scope="col"> Loại tin tức </th>
-                                <th scope="col"> Tên bài viết </th>
-                                <th scope="col"> Mô tả bài viết </th>
-                                <th scope="col"> Nội dung bài viết </th>
-                                <th scope="col"> Ảnh </th>
-                                <th scope="col"> Trạng thái </th>
-                                <th scope="col"> created_at </th>
-                                <th scope="col"> updated_at </th>
+                                <th scope="col-md-4"> id </th>
+                                <th scope="col-md-4"> Loại tin tức </th>
+                                <th scope="col-md-4"> Tên bài viết </th>
+                                <th scope="col-md-4"> Mô tả bài viết </th>
+                                <th scope="col-md-4"> Nội dung bài viết </th>
+                                <th scope="col-md-4"> Ảnh </th>
+                                <th scope="col-md-4"> Trạng thái </th>
+                                <th scope="col-md-4"> created_at </th>
+                                <th scope="col-md-4"> updated_at </th>
                             </tr>
                         </thead>
                         <tbody>
