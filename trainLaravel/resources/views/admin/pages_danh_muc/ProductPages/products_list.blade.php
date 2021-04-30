@@ -5,19 +5,24 @@
 
     <section class="content">
             
-    <div class="container">
+    <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
 
-                    <h1 style="text-align:center"> Danh sách Sản phẩm</h1> <br> <br>
+                    <h1 style="text-align:center"> Danh sách Sản phẩm</h1> 
+                    <br> <br>
 
-                    <div class="form-group">
-                            <label class="sr-only" for=""></label>
-                            <input type="text" style="border=10" name="keywordsearch" value="{{ request()->input('keywordsearch') }}" class="form-control" id="" placeholder="Search something"> <br> 
-                            <button type="submit" class="btn btn-primary">Search</button>
-                    </div>
-                         <br> <br>
-                        <a href="{{route('products.create')}}" class="btn btn-primary">Thêm sản phẩm mới</a> 
+                    <a href="{{route('products.create')}}" class="btn btn-primary">Thêm sản phẩm mới</a> <br>
+                    <br> 
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <input type="text" style="border=18" name="keywordsearch" value="{{ request()->input('keywordsearch') }}" class="form-control" id="" placeholder="Nhập sản phẩm muốn tìm kiếm"> <br> 
+                            </div>
+                            <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary ">Tìm kiếm sản phẩm</button>
+                            </div>
+                        </div>
                     </form>
                     <br> 
                    <table class="table table-striped table-dark">
@@ -58,7 +63,7 @@
                         </tbody>
                         </table>
                    
-                    <div style="padding-left:450px">
+                    <div style="text-align:center">
 							{{$product->appends($_GET)}}      
 					</div>
                 </div>

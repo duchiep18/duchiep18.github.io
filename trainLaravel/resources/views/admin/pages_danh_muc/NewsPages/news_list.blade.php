@@ -3,33 +3,38 @@
 
 @section('content')
     <section class="content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
 
                     <h1 style="text-align:center"> Danh sách tin tức</h1> <br> <br>
 
-                    <div class="form-group">
-                            <label class="sr-only" for=""></label>
-                            <input type="text" style="border=10" name="keywordsearch" value="{{ request()->input('keywordsearch') }}" class="form-control" id="" placeholder="Search something"> <br> 
-                            <button type="submit" class="btn btn-primary">Search</button>
-                    </div>
-                         <br> <br>
-                        <a href="{{route('news.create')}}" class="btn btn-primary">Thêm bài tin mới</a> 
+                    <a href="{{route('news.create')}}" class="btn btn-primary">Thêm bài tin mới</a>
+                    <br><br>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <input type="text" style="border=18" name="keywordsearch" value="{{ request()->input('keywordsearch') }}" class="form-control" id="" placeholder="Nhập thứ bạn muốn tìm kiếm"> <br> 
+                            </div>
+                            <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary ">Tìm kiếm bài viết</button>
+                            </div>
+                        </div>
                     </form>
-                    <br> 
+                         <br> <br>
+                        
                    <table class="table table-striped table-dark">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col-md-4"> id </th>
-                                <th scope="col-md-4"> Loại tin tức </th>
-                                <th scope="col-md-4"> Tên bài viết </th>
-                                <th scope="col-md-4"> Mô tả bài viết </th>
-                                <th scope="col-md-4"> Nội dung bài viết </th>
-                                <th scope="col-md-4"> Ảnh </th>
-                                <th scope="col-md-4"> Trạng thái </th>
-                                <th scope="col-md-4"> created_at </th>
-                                <th scope="col-md-4"> updated_at </th>
+                                <th class="col-md-1"> id </th>
+                                <th class="col-md-1"> Loại tin tức </th>
+                                <th class="col-md-2"> Tên bài viết </th>
+                                <th class="col-md-2"> Mô tả bài viết </th>
+                                <th class="col-md-4"> Nội dung bài viết </th>
+                                <th class="col-md-2"> Ảnh </th>
+                                <th class="col-md-1"> Trạng thái </th>
+                                <th class="col-md-2"> created_at </th>
+                                <th class="col-md-2"> updated_at </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,7 +64,7 @@
                         </tbody>
                         </table>
 
-                    <div style="padding-left:350px">
+                    <div style="text-align:center">
 						{{$news->appends($_GET)}}      
 					</div>
                 </div>

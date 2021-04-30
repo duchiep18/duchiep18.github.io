@@ -34,8 +34,6 @@ class PostController extends Controller
         $content = $request -> input('noidungbaiviet');
         $image = $request -> input('anhbaiviet');
         $status = $request -> input('trang_thai');
-        $created_at = $request -> input('created_at');
-        $updated_at = $request -> input('updated_at');
         $new = new News;
         $new->id = $id;
         $new->category_id = $category_id;
@@ -44,8 +42,6 @@ class PostController extends Controller
         $new->content = $content;
         $new->image = $image;
         $new->status = $status;
-        $new->created_at = $created_at;
-        $new->updated_at = $updated_at;
         $new->save();
 
         return redirect()->route('news.index');

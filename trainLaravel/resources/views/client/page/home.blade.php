@@ -307,7 +307,7 @@
 							</div>
 						</div>
 						@endforeach
-						<div style="text-align:center">
+						<div style="text-align:center ">
 							{{$product->appends($_GET)}}      
 						</div>
 					</div><!--features_items-->

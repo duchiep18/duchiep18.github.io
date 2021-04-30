@@ -35,16 +35,12 @@ class ProductController extends Controller
         $giasanpham = $request->input('giasanpham');
         $image = $request->input('image');
         $trang_thai = $request->input('trang_thai');
-        $created_at = $request->input('created_at');
-        $updated_at = $request->input('updated_at');
         $product = new themsanpham;
         $product->tensanpham = $tensanpham;
         $product->thongtinsanpham = $thongtinsanpham;
         $product->giasanpham = $giasanpham;
         $product->image = $image;
         $product->trang_thai = $trang_thai;
-        $product->created_at = $created_at;
-        $product->updated_at = $updated_at;
         $product->save();
         return redirect()->route('products.index');   
 
