@@ -14,7 +14,7 @@
                     <form action="">
                         <div class="row">
                             <div class="col-md-6">
-                                    <input type="text" style="border=18" name="keywordsearch" value="{{ request()->input('keywordsearch') }}" class="form-control" id="" placeholder="Nhập thứ bạn muốn tìm kiếm"> <br> 
+                                    <input type="text" style="border=18" name="keywordsearch_news" value="{{ request()->input('keywordsearch_news') }}" class="form-control" id="" placeholder="Nhập thứ bạn muốn tìm kiếm"> <br> 
                             </div>
                             <div class="col-md-6">
                             <button type="submit" class="btn btn-primary ">Tìm kiếm bài viết</button>

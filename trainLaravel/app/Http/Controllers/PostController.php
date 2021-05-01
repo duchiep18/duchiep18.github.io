@@ -13,12 +13,23 @@ class PostController extends Controller
      public function index(){
         return view('admin.pages_danh_muc.NewsPages.news_list');
     }
-
+    //tìm kiếm bài viết
+    public function search_news(Request $request)
+    {
+        $keywordnews = $request->input('keywordsearch_news');
+        $newsQuery = News::query();
+        if($keywordnews) {
+            $newsQuery->where('title', 'like', "%{keywordsearch_news}%");
+        }
+        $news = $newsQuery->paginate();
+        return view('admin.pages_danh_muc.NewsPages.news_list', compact('news'));
+    }
 
     public function create(){
         return view('admin.pages_danh_muc.NewsPages.createNews');
     }
 
+    
     public function getNews(Request $request){
         $query =News::query();
         $news = $query->paginate(5);
