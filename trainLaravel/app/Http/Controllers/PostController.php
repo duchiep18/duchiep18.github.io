@@ -8,7 +8,6 @@ use App\Models\News;
 
 class PostController extends Controller
 {
-    
      //fumction News List
      public function index(){
         return view('admin.pages_danh_muc.NewsPages.news_list');
@@ -18,17 +17,17 @@ class PostController extends Controller
     {
         $keywordnews = $request->input('keywordsearch_news');
         $newsQuery = News::query();
-        if($keywordnews) {
-            $newsQuery->where('title', 'like', "%{keywordsearch_news}%");
-        }
-        $news = $newsQuery->paginate();
-        return view('admin.pages_danh_muc.NewsPages.news_list', compact('news'));
+        if($keywordnews) 
+        {
+            $newsQuery->where('title', 'like', "%{$keywordnews}%");
+        } 
+        $new = $newsQuery->paginate();
+        return view('admin.pages_danh_muc.NewsPages.news_list', compact('new'));
     }
 
     public function create(){
         return view('admin.pages_danh_muc.NewsPages.createNews');
     }
-
     
     public function getNews(Request $request){
         $query =News::query();

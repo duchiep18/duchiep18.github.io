@@ -12,7 +12,17 @@ class ProductController extends Controller
     public function create(){
         return view('admin.pages_danh_muc.ProductPages.createProducts');
     }
-
+     //tìm kiếm sản phẩm
+     public function search_products(Request $request)
+     {
+         $keywordproducts = $request->input('keywordsearch_products');
+         $productsQuery = themsanpham::query();
+         if($keywordproducts) {
+             $productsQuery->where('tensanpham', 'like', "%{$keywordproducts}%");
+         }
+         $product = $productsQuery->paginate();
+         return view('admin.pages_danh_muc.NewsPages.news_list', compact('product'));
+     }
     //tìm kiếm, đổ dl ra trang qly
      public function getProduct_admin(Request $request){
         $query = themsanpham::query();
