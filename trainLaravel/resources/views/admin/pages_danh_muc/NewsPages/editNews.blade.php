@@ -14,10 +14,11 @@
                                 <div class="col-sm-6">
                                     <label for="">Các loại tin tức:</label>
                                     <select name="loaitintuc" class="form-control show-tick"  >
-                                        <option value="">-- Chọn loại tin tức --</option>
-                                        <option value="0">Tin mới về công nghệ  </option>
-                                        <option value="1">Bài viết review sản phẩm </option>
-                                        <option value="2">Mẹo vặt máy tính hay</option>
+                                        <option value="category_id">-- Chọn loại tin tức --</option>
+                                        @foreach($categories as $category)
+                                            <option {{ $category->id == $new->category_id ? 'selected' : '' }} value="{{$category->id}}"> {{$category->name}}</option>
+                                        @endforeach
+                                    </select>
                                     </select>
                                 </div>
                             </div>
@@ -47,12 +48,13 @@
                         <div class="form-group">
                             <label for="">Status:</label>
                             <select name="trang_thai" id="input" class="form-control" required="required">
-                                 <option value="1">Đăng luôn</option>
-                                 <option value="2">Chờ duyệt</option>                                                         
+                                <option value="1">Đăng ngay </option>
+                                <option value="2">Chờ duyệt </option>
+                                <option value="3">Bản nháp</option>                                                     
                             </select>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        <button type="submit" class="btn btn-primary">Cập nhật bài viết</button>
                     </form>
                         
                 </div>

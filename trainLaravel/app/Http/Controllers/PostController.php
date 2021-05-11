@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\news_categories;
 
 
 class PostController extends Controller
@@ -24,18 +25,40 @@ class PostController extends Controller
         $new = $newsQuery->paginate();
         return view('admin.pages_danh_muc.NewsPages.news_list', compact('new'));
     }
-
-    public function create(){
-        return view('admin.pages_danh_muc.NewsPages.createNews');
+    //truy cập trang tạo bài viết
+    public function create()
+    {
+        $categories = news_categories::all();
+        return view('admin.pages_danh_muc.NewsPages.createNews', compact('categories'));
     }
-    
+
+    //truy cập trang tạo danh mục
+    public function create_catgr(){
+        return view('admin.pages_danh_muc.NewsPages.createNewsCategories');
+    }
+    //phân trang quản lý tin tức
     public function getNews(Request $request){
         $query =News::query();
         $news = $query->paginate(5);
         // $news = posts::paginate(4);
         return view('admin.pages_danh_muc.NewsPages.news_list', compact('news'));
     }
+    //tạo chuyên mục tin tức
+    public function storeCategories(Request $request) {
+        $id = $request ->input('id');
+        $name = $request ->input ('tendanhmuc');
+        $description = $request ->input('motadanhmuc');
+        
+        $news_catgr = new news_categories;
+        $news_catgr->id = $id;
+        $news_catgr->name = $name; 
+        $news_catgr->description = $description;
+        $news_catgr->save(); 
 
+        return redirect()->route('news.create');
+    }
+
+    //tạo bai viết
     public function storeData(Request $request){
         $id = $request -> input('id');
         $category_id = $request -> input('loaitintuc');
@@ -53,15 +76,15 @@ class PostController extends Controller
         $new->image = $image;
         $new->status = $status;
         $new->save();
-
         return redirect()->route('news.index');
     }
-
+    //sang trang edit tin tức
     public function edit($id){
+        $categories = news_categories::all();
         $new = News::find($id);
-        return view ('admin.pages_danh_muc.NewsPages.editNews', compact('new'));
+        return view ('admin.pages_danh_muc.NewsPages.editNews', compact('new', 'categories'));
     }
-
+    //update tin tức
     public function update($id, Request $request)
     {
         $newupdate = News::find($id);
@@ -85,7 +108,7 @@ class PostController extends Controller
         $newupdate->save();
         return redirect()->route('news.index');
     }
-
+    //hàm hủy bài viết  
     public function destroy($id)
     {
         $newdelete = News::find($id);

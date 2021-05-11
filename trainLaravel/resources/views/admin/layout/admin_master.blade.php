@@ -339,7 +339,7 @@
                                
                             </li>
                             <li>
-                                <a href="#" alt="">
+                                <a href="{{route('news.create_catgr')}}" alt="">
                                     <span>Chuyên mục tin tức </span>
                                 </a>
                                
@@ -395,7 +395,7 @@
                                 <a href="{{route('products.create')}}">Thêm mới sản phẩm</a>
                             </li>
                             <li>
-                                <a href="">Danh mục sản phẩm</a>
+                                <a href="{{route('products.create_catgr')}}">Danh mục sản phẩm</a>
                             </li>  
 
                             <li>

@@ -16,10 +16,10 @@
                                 <div class="col-sm-6">
                                     <label for="">Các loại tin tức:</label>
                                     <select name="loaitintuc" class="form-control show-tick">
-                                        <option value="">-- Chọn loại tin tức --</option>
-                                        <option value="1">Tin mới về công nghệ  </option>
-                                        <option value="2">Bài viết review sản phẩm </option>
-                                        <option value="3">Mẹo vặt máy tính hay</option>
+                                        <option value="category_id">-- Chọn loại tin tức --</option>
+                                        @foreach($categories as $category)
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

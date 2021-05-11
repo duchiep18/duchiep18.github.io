@@ -21,12 +21,16 @@ use Illuminate\Support\Facades\Route;
     Route::get ('/news.index', 'PostController@getNews')->name('news.index');
     Route::get('/news.create', 'PostController@create')->name('news.create');
     Route::post('/news', 'PostController@storeData')->name('news.storeData');
+    Route::get('/news.create_catgr','PostController@create_catgr')->name('news.create_catgr');
+    Route::post('/news.catgr','PostController@storeCategories')->name('news.storeCategories');
     Route::get('/news/{id}/edit', 'PostController@edit')->name('news.edit');
     Route::put('/news/{id}', 'PostController@update')->name('news.update');
     Route::delete('/news/{id}', 'PostController@destroy')->name('news.destroy');
 
     //Route Product
     Route::get ('/products.index', 'ProductController@getProduct_admin')->name('products.index');
+    Route::get('/products.create_catgr', 'ProductController@create_prd_catgr')->name('products.create_catgr');
+    Route::post('/products.catgr', 'ProductController@productCategories')->name('products.storeCategories');
     Route::get ('/products.create','ProductController@create')->name('products.create');
     Route::post('/products', 'ProductController@storeData')->name('products.storeData');
     Route::get('/products/{id}/edit', 'ProductController@edit')->name('products.edit');
@@ -93,4 +97,5 @@ Route::get('fake_du_lieu_news', function(){
         $new->updated_at;
         $new->save();
     }
+
 });

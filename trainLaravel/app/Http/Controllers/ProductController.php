@@ -4,21 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\themsanpham;
+use App\Models\products_categories;
 
 class ProductController extends Controller
 {
 
-    
+    //chuyển trang tạo sản phẩm
     public function create(){
-        return view('admin.pages_danh_muc.ProductPages.createProducts');
+        $categories_prd = products_categories::all(); 
+        return view('admin.pages_danh_muc.ProductPages.createProducts', compact('categories_prd'));
     }
-     //tìm kiếm sản phẩm
+    //chuyển trang tạo danh mục 
+    public function create_prd_catgr(){
+        return view('admin.pages_danh_muc.ProductPages.createProductsCategories');
+    }
+    //tìm kiếm sản phẩm
      public function search_products(Request $request)
      {
          $keywordproducts = $request->input('keywordsearch_products');
          $productsQuery = themsanpham::query();
          if($keywordproducts) {
-             $productsQuery->where('tensanpham', 'like', "%{$keywordproducts}%");
+             $productsQuery->where('tensanpham','like', "%{$keywordproducts}%");
          }
          $product = $productsQuery->paginate();
          return view('admin.pages_danh_muc.NewsPages.news_list', compact('product'));
@@ -37,7 +43,22 @@ class ProductController extends Controller
         // $product = themsanpham::paginate(4);
         return view('client.page.home', compact('product'));
     }
+    //hàm tạo danh mục sản phẩm
+    public function productCategories(Request $request){
+        $id = $request->input('id');
+        $tendanhmucsp = $request->input('tendanhmucsp');
+        $motadanhmucsp = $request -> input('motadanhmucsp');
+        $loaidanhmucsp = $request -> input('loaidanhmucsp');
 
+        $product_catgr = new products_categories;
+        $product_catgr->id = $id; 
+        $product_catgr->tendanhmucsp = $tendanhmucsp; 
+        $product_catgr->motadanhmucsp = $motadanhmucsp; 
+        $product_catgr->loaidanhmucsp = $loaidanhmucsp; 
+        $product_catgr->save();
+        return redirect()->route('products.create_catgr');
+    }
+    //hàm tạo sản phẩm vào csdl
     public function storeData(Request $request){
         $id = $request->input('id');
         $tensanpham = $request->input('tensanpham');
@@ -55,13 +76,14 @@ class ProductController extends Controller
         return redirect()->route('products.index');   
 
      }
+     //chuyển đến trang edit sản phẩm
      public function edit($id){
+        $categories_prd = products_categories::all(); 
         $product = themsanpham::find($id);
-        return view ('admin.pages_danh_muc.ProductPages.editProduct', compact('product'));
+        return view ('admin.pages_danh_muc.ProductPages.editProduct',compact('product','categories_prd'));
     }
-
+    //hàm cập nhật sản phẩm
     public function update($id, Request $request)
-
     {
         $product = themsanpham::find($id);
         $tensanpham = $request->input('tensanpham');
@@ -83,7 +105,7 @@ class ProductController extends Controller
         
         return redirect()->route('products.index');
     }
-   
+    //hàm hủy sản phẩm
     public function destroy($id){
         $productdelete = themsanpham::find($id);
         $productdelete->delete();

@@ -14,18 +14,14 @@
                         <div class="form-group">
                             <label for="">Loại sản phẩm:</label>
                             <select name="loaisanpham" id="input" class="form-control" required="required">
-                                 <option value="1">Chipset-CPU</option>
-                                 <option value="2">Mainboard - Bo mạch chủ</option>
-                                 <option value="3">VGA - Card đồ họa màn hình</option>
-                                 <option value="4">Ram - Bộ nhớ trong</option>
-                                 <option value="5">PSU - Nguồn máy tính</option>
-                                 <option value="6">SSD - HDD - Ổ cứng máy tính</option>
-                                 <option value="7">Monitor - Màn hình máy tính</option>
-                                 <option value="8">Case - Vỏ máy tính</option>
+                                 <option value="category_id">Chọn danh mục</option>
+                                    @foreach($categories_prd as $category_prd)
+                                        <option value="{{$category_prd->id}}">{{$category_prd->tendanhmucsp}}</option>
+                                    @endforeach
                              </select>
                              
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="">Tên sản phẩm:</label>
                             <input type="text" value="" name="tensanpham" class="form-control" id="" placeholder="">
