@@ -13,18 +13,7 @@ class PostController extends Controller
      public function index(){
         return view('admin.pages_danh_muc.NewsPages.news_list');
     }
-    //tìm kiếm bài viết
-    public function search_news(Request $request)
-    {
-        $keywordnews = $request->input('keywordsearch_news');
-        $newsQuery = News::query();
-        if($keywordnews) 
-        {
-            $newsQuery->where('title', 'like', "%{$keywordnews}%");
-        } 
-        $new = $newsQuery->paginate();
-        return view('admin.pages_danh_muc.NewsPages.news_list', compact('new'));
-    }
+  
     //truy cập trang tạo bài viết
     public function create()
     {
@@ -43,6 +32,18 @@ class PostController extends Controller
         // $news = posts::paginate(4);
         return view('admin.pages_danh_muc.NewsPages.news_list', compact('news'));
     }
+      //tìm kiếm bài viết
+      public function search_news(Request $request)
+      {
+          $keywordnews = $request->input('keywordsearch_news');
+          $newsQuery = News::query();
+          if($keywordnews) 
+          {
+              $newsQuery->where('title', 'like', "%{$keywordnews}%");
+          } 
+          $new = $newsQuery->paginate();
+          return view('admin.pages_danh_muc.NewsPages.news_list', compact('new'));
+      }
     //tạo chuyên mục tin tức
     public function storeCategories(Request $request) {
         $id = $request ->input('id');

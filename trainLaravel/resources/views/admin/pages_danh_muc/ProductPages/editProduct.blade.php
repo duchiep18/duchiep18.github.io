@@ -48,10 +48,11 @@
                         
 
                         <div class="form-group">
-                            <label for="">Status:</label>
+                            <label for="">Trạng thái sản phẩm:</label>
                              <select name="trang_thai" id="input" class="form-control" required="required">
                                  <option value="1">Còn hàng</option>
                                  <option value="2">Hết hàng</option>
+                                 <option value="3">Liên hệ</option>
                              </select>
                         </div>
 
