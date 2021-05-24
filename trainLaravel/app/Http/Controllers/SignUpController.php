@@ -11,7 +11,7 @@ class SignUpController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         $address = $request->input('address');
- 
+        
         $user = new User;
         $user->username = $username;
         $user->email = $email;

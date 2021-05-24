@@ -99,3 +99,23 @@ Route::get('fake_du_lieu_news', function(){
     }
 
 });
+
+Route::get('fake-profile', function(){
+    $profile = new \App\Models\Profile_Users;
+    $profile->id_code = '001088012336';
+    $profile->email = 'badboyszohan@gmail.com';
+    $profile->address = '113, ngõ 97 Thái Thịnh, Đống Đa - HN';
+    $profile->gender = 1;
+    $profile->id_user = 1;
+
+    $profile->save();
+
+});
+
+Route::get('relationship/one-to-one', function(){
+    $user = \App\Models\User::find(1);
+
+    echo "Username: {$user->username} <br> ";
+    echo "Địa chỉ: {$user->profile->address} <br> ";
+
+}); 

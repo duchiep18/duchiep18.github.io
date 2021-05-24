@@ -11,4 +11,8 @@ class User extends Authenticatable
 {
     protected $table = 'users';
     use HasFactory;
+
+    public function profile() {
+        return $this->hasOne('App\Models\Profile_Users', 'id_user', 'id');
+    }
 }
