@@ -1,6 +1,5 @@
 @extends('admin.layout.admin_master')
 
-
 @section('content')
     <section class="content">
         <div class="container-fluid">
@@ -41,7 +40,11 @@
                             @foreach ($news as $addnew)
                             <tr>
                                 <td> {{$addnew->id}} </td>
-                                <td> {{$addnew->category_id}} </td>
+                                <td> 
+                                    @if ($addnew->category)
+                                        {{$addnew->category->name}}
+                                    @endif
+                                </td>
                                 <td> {{$addnew->title}} </td>
                                 <td> {{$addnew->description}} </td>
                                 <td> {{$addnew->content}} </td>
