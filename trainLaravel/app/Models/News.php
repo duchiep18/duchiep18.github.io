@@ -10,8 +10,4 @@ class News extends Model
     protected $table = 'posts';
 
     use HasFactory;
-
-    public function category(){
-        return $this->belongsTo('App\Models\news_categories', 'category_id', 'id');
-    }
 }
