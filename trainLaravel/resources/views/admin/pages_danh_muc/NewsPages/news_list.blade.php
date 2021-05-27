@@ -83,7 +83,7 @@
                         event.preventDefault();
                         let isDelete = confirm('Sếp có muốn xóa bài viết này hay không?');
                         if (isDelete) {
-                            $(this).parents('form').submit();
+                             $(this).parents('form').submit();
                         }
                     });
                 })
