@@ -41,7 +41,11 @@
                             @foreach ($news as $addnew)
                             <tr>
                                 <td> {{$addnew->id}} </td>
-                                <td> {{$addnew->category_id}} </td>
+                                <td> 
+                                    @if($addnew->news_category)
+                                        {{$addnew->news_category->name}}
+                                    @endif
+                                </td>
                                 <td> {{$addnew->title}} </td>
                                 <td> {{$addnew->description}} </td>
                                 <td> {{$addnew->content}} </td>

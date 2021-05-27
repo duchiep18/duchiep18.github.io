@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class News extends Model
 {
     protected $table = 'posts';
-
     use HasFactory;
+    public function news_category() {
+        return $this->belongsTo('App\Models\news_categories', 'category_id', 'id');
+    }
 }

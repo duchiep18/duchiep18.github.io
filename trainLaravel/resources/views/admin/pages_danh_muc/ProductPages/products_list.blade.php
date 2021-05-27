@@ -30,6 +30,7 @@
                             <tr>
                                 <th> id </th>
                                 <th> Tên sản phẩm </th>
+                                <th> Tên danh mục sản phẩm <th>
                                 <th> Thông tin sản phẩm </th>
                                 <th> Giá sản phẩm </th>
                                 <th> Ảnh sản phẩm </th>
@@ -43,6 +44,11 @@
                             <tr>
                                 <td> {{$addproduct->id}} </td>
                                 <td> {{$addproduct->tensanpham}} </td>
+                                <td> 
+                                    @if($addproduct->product_category)
+                                        {{$addproduct->product_category->tendanhmucsp}}
+                                    @endif
+                                </td>
                                 <td> {{$addproduct->thongtinsanpham}} </td>
                                 <td> {{$addproduct->giasanpham}} </td>
                                 <td class="thumb column-thumb" data-colname="Ảnh"><a href="#"><img width="150" height="150" src="{{'$addproduct->image'}}" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"  sizes="(max-width: 150px) 100vw, 150px"></a>

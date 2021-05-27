@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class themsanpham extends Model
 {
-    // protected $table = 'them_san_pham';
+    protected $table = 'them_san_pham';
     use HasFactory;
 
     public function product_category() {

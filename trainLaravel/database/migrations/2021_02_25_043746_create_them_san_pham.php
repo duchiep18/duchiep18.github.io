@@ -16,8 +16,9 @@ class CreateThemSanPham extends Migration
         Schema::create('them_san_pham', function (Blueprint $table) {
             $table->id();
             $table->string('tensanpham')->notnullable();
+            $table->integer('categories_prd_id')->nullable();
             $table->text('thongtinsanpham')->nullable();
-            $table->Integer('giasanpham')->nullable();
+            $table->integer('giasanpham')->nullable();
             $table->string('image')->nullable();
             $table->tinyInteger('trang_thai')->default(1);
             $table->timestamps();

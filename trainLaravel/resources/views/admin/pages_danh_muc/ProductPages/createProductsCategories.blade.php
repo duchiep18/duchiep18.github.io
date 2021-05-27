@@ -27,7 +27,7 @@
                                 <div class="col-sm-6">
                                     <label for="">Loại quyền danh mục:</label>
                                     <select name="loaidanhmucsp" class="form-control show-tick">
-                                        <option value="category_id">-- Chọn loại tin tức --</option>
+                                        <option value="category_id">-- Chọn loại danh mục --</option>
                                             <option value="1">Sản phẩm</option>
                                             <option value="2">Danh mục con</option>
                                             <option value="3">Cả hai</option>

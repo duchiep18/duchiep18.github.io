@@ -14,7 +14,7 @@ class AddPaidToThemSanPham extends Migration
     public function up()
     {
         Schema::table('them_san_pham', function (Blueprint $table) {
-            $table->integer('categories_prd_id')->after('tensanpham')->nullalbe();
+            
 
         });
     }
@@ -27,7 +27,8 @@ class AddPaidToThemSanPham extends Migration
     public function down()
     {
         Schema::table('them_san_pham', function (Blueprint $table) {
-                
+            
+
         });
     }
 }
