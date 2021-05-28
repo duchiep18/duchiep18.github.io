@@ -10,20 +10,20 @@
                     <form action="{{route('products.update', $product->id)}}" method="POST" role="form">
                         @csrf 
                         @method('put')
-                        <h1 style="text-align:center">Tạo sản phẩm mới</h1> <br><br>
-                        <div class="form-group">
-                            <label for="">Loại sản phẩm:</label>
-                            <select name="loaisanpham" id="input" class="form-control" required="required">
-                                 <option value="1">Chipset-CPU</option>
-                                 <option value="2">Mainboard - Bo mạch chủ</option>
-                                 <option value="3">VGA - Card đồ họa màn hình</option>
-                                 <option value="4">Ram - Bộ nhớ trong</option>
-                                 <option value="5">PSU - Nguồn máy tính</option>
-                                 <option value="6">SSD - HDD - Ổ cứng máy tính</option>
-                                 <option value="7">Monitor - Màn hình máy tính</option>
-                                 <option value="8">Case - Vỏ máy tính</option>
-                             </select>
-                        </div>
+                        <h1 style="text-align:center">Cập nhật sản phẩm </h1> <br><br>
+                            <div class="body">
+                                <div class="row clearfix">
+                                    <div class="col-sm-6">
+                                        <label for="">Các loại danh mục sản phẩm:</label>
+                                        <select name="loaisanpham" class="form-control show-tick"  >
+                                            <option value="category_prd_id">-- Chọn loại danh mục --</option>
+                                            @foreach($categories_prd as $category_prd)
+                                                <option {{ $category_prd->id == $product->categories_prd_id ? 'selected' : '' }} value="{{$category_prd->id}}"> {{$category_prd->tendanhmucsp}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
 
                         <div class="form-group">
                             <label for="">Tên sản phẩm:</label>

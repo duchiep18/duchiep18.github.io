@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//admin Route
+//Admin Route
 //Route Admin Dashboard
     Route::get('xuepc_admin', function(){
         return view('admin.layout.home_admin');
@@ -38,7 +38,9 @@ use Illuminate\Support\Facades\Route;
     Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
 //End Route Admin
 
-//Route Home page
+//===============================================//
+
+//Route Home page Client
 Route::get('home', function() {
     return view('client.page.home');
 });
@@ -71,19 +73,16 @@ Route::get('contact_us',function(){
     return view('client.page.contactus');
 });
 
-
-Route::get('/posts', function () {
-    return view('posts.index');
-});
-
-Route::get ('/demo', function(){
-
-    return view('admin.pages_danh_muc.ProductPages.demo');
-});
-
+//Route tính toán đại số ở đây
 Route::get('/calculator','CalculatorController@getFormCalculator');
 Route::post('/calculator','CalculatorController@storeDataFormCalculate')->name('calculator.calculate');
 
+//=======================================================//
+
+//fake demo route nhóm các bài viết có cùng category
+Route::get('categories/{id}/news','CategoryController@news');
+
+//Route fake dữ liệu news
 Route::get('fake_du_lieu_news', function(){
     for ($i=0; $i < 113 ; $i++) { 
         $new = new \App\Models\News;
@@ -97,9 +96,9 @@ Route::get('fake_du_lieu_news', function(){
         $new->updated_at;
         $new->save();
     }
-
+    
 });
-
+//Route fake dl profile người dùng
 Route::get('fake-profile', function(){
     $profile = new \App\Models\Profile_Users;
     $profile->id_code = '001088012336';
@@ -107,15 +106,25 @@ Route::get('fake-profile', function(){
     $profile->address = '113, ngõ 97 Thái Thịnh, Đống Đa - HN';
     $profile->gender = 1;
     $profile->id_user = 1;
-
+    
     $profile->save();
-
+    
 });
-
+//Route demo quan hệ 1-1
 Route::get('relationship/one-to-one', function(){
     $user = \App\Models\User::find(1);
-
+    
     echo "Username: {$user->username} <br> ";
     echo "Địa chỉ: {$user->profile->address} <br> ";
-
+    
 }); 
+
+//demo và các thứ muốn thử
+Route::get('/posts', function () {
+    return view('posts.index');
+});
+
+Route::get ('/demo', function(){
+
+    return view('admin.pages_danh_muc.ProductPages.demo');
+});

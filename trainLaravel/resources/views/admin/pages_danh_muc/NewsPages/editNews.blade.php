@@ -19,7 +19,6 @@
                                             <option {{ $category->id == $new->category_id ? 'selected' : '' }} value="{{$category->id}}"> {{$category->name}}</option>
                                         @endforeach
                                     </select>
-                                    </select>
                                 </div>
                             </div>
                         </div>

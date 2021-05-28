@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label for="">Loại sản phẩm:</label>
                             <select name="loaisanpham" id="input" class="form-control" required="required">
-                                 <option value="category_id">Chọn danh mục</option>
+                                 <option value="category_prd_id">Chọn danh mục</option>
                                     @foreach($categories_prd as $category_prd)
                                         <option value="{{$category_prd->id}}">{{$category_prd->tendanhmucsp}}</option>
                                     @endforeach

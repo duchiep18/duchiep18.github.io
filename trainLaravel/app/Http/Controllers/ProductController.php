@@ -62,12 +62,14 @@ class ProductController extends Controller
     public function storeData(Request $request){
         $id = $request->input('id');
         $tensanpham = $request->input('tensanpham');
+        $categories_prd = $request->input('loaisanpham');
         $thongtinsanpham = $request->input('thongtinsanpham');
         $giasanpham = $request->input('giasanpham');
         $image = $request->input('image');
         $trang_thai = $request->input('trang_thai');
         $product = new themsanpham;
         $product->tensanpham = $tensanpham;
+        $product->categories_prd_id = $categories_prd;
         $product->thongtinsanpham = $thongtinsanpham;
         $product->giasanpham = $giasanpham;
         $product->image = $image;
@@ -87,7 +89,8 @@ class ProductController extends Controller
     {
         $product = themsanpham::find($id);
         $tensanpham = $request->input('tensanpham');
-        $thongtinsanpham = $request->input('thongtinsanpham');
+        $categories_prd = $request->input('loaisanpham');
+         $thongtinsanpham = $request->input('thongtinsanpham');
         $giasanpham = $request->input('giasanpham');
         $image = $request->input('image');
         $trang_thai = $request->input('trang_thai');
@@ -95,6 +98,7 @@ class ProductController extends Controller
         $updated_at = $request->input('updated_at');
 
         $product->tensanpham = $tensanpham;
+        $product->categories_prd_id = $categories_prd;
         $product->thongtinsanpham = $thongtinsanpham;
         $product->giasanpham = $giasanpham;
         $product->image = $image;
