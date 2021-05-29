@@ -17,27 +17,49 @@ use Illuminate\Support\Facades\Route;
     Route::get('xuepc_admin', function(){
         return view('admin.layout.home_admin');
     });
-    //Route NewS 
+
+    //Route NewS
+
+    //route get về trang danh sách tin tức
     Route::get ('/news.index', 'PostController@getNews')->name('news.index');
+    //route tạo bài viết mới
     Route::get('/news.create', 'PostController@create')->name('news.create');
+    //route lưu bài viết vào csdl
     Route::post('/news', 'PostController@storeData')->name('news.storeData');
-    Route::get('/news.create_catgr','PostController@create_catgr')->name('news.create_catgr');
-    Route::post('/news.catgr','PostController@storeCategories')->name('news.storeCategories');
+    //route edit bài viết tìm theo id
     Route::get('/news/{id}/edit', 'PostController@edit')->name('news.edit');
+    //route update dữ liệu mới vào csdl
     Route::put('/news/{id}', 'PostController@update')->name('news.update');
+    //route xóa bài viết theo id
     Route::delete('/news/{id}', 'PostController@destroy')->name('news.destroy');
+    //Route tạo categories cho các bài viết
+    Route::get('/news.create_catgr','PostController@create_catgr')->name('news.create_catgr');
+    //Lưu categories vào csdl
+    Route::post('/news.catgr','PostController@storeCategories')->name('news.storeCategories');
+    //route nhóm các bài viết và sản phẩm có cùng category
+    Route::get('categories/{id}/news','CategoryController@news');
 
     //Route Product
-    Route::get ('/products.index', 'ProductController@getProduct_admin')->name('products.index');
-    Route::get('/products.create_catgr', 'ProductController@create_prd_catgr')->name('products.create_catgr');
-    Route::post('/products.catgr', 'ProductController@productCategories')->name('products.storeCategories');
-    Route::get ('/products.create','ProductController@create')->name('products.create');
-    Route::post('/products', 'ProductController@storeData')->name('products.storeData');
-    Route::get('/products/{id}/edit', 'ProductController@edit')->name('products.edit');
-    Route::put('/products/{id}', 'ProductController@update')->name('products.update');
-    Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
-//End Route Admin
 
+    Route::get ('/products.index', 'ProductController@getProduct_admin')->name('products.index');
+
+    Route::get('/products.create_catgr', 'ProductController@create_prd_catgr')->name('products.create_catgr');
+
+    Route::post('/products.catgr', 'ProductController@productCategories')->name('products.storeCategories');
+
+    Route::get ('/products.create','ProductController@create')->name('products.create');
+
+    Route::post('/products', 'ProductController@storeData')->name('products.storeData');
+
+    Route::get('/products/{id}/edit', 'ProductController@edit')->name('products.edit');
+
+    Route::put('/products/{id}', 'ProductController@update')->name('products.update');
+
+    Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
+
+    Route::get('categories/{id}/products', 'CategoryController@products');
+
+//End Route Admin
 //===============================================//
 
 //Route Home page Client
@@ -79,8 +101,6 @@ Route::post('/calculator','CalculatorController@storeDataFormCalculate')->name('
 
 //=======================================================//
 
-//fake demo route nhóm các bài viết có cùng category
-Route::get('categories/{id}/news','CategoryController@news');
 
 //Route fake dữ liệu news
 Route::get('fake_du_lieu_news', function(){
