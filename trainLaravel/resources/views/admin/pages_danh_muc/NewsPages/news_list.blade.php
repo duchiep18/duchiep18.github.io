@@ -43,7 +43,7 @@
                                 <td> {{$addnew->id}} </td>
                                 <td> 
                                     @if($addnew->news_category)
-                                        {{$addnew->news_category->name}}
+                                        {{$addnew->news_category->news_categories_name}}
                                     @endif
                                 </td>
                                 <td> {{$addnew->title}} </td>

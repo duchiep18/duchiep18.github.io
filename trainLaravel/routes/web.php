@@ -61,6 +61,15 @@ use Illuminate\Support\Facades\Route;
 
 //End Route Admin
 //===============================================//
+//Middleware phân quyền cho các Route
+Route::middleware(['auth'])->group(function () {
+    
+    Route::get('homeLogin', function() {
+        return view('client.page.homeLogin');
+    });
+    Route::get('homeLogin', 'ProductController@getProduct_Login');
+});     
+
 
 //Route Home page Client
 Route::get('home', function() {
@@ -68,13 +77,12 @@ Route::get('home', function() {
 });
 
 //Route Login, SignUp
-Route::get('login',function(){
-    return view('client.page.login');
-});
+Route::get('login', 'AuthController@geptFormLogin')->name('login.get');
+Route::post('login', 'AuthController@submitFormLogin')->name('login.submit');
+Route::get('register', 'AuthController@getFormRegister')->name('register.get');
+Route::post('register', 'AuthController@submitFormRegister')->name('register.submit');
+Route::post('logout', 'AuthController@logout')->name('logout');
 
-Route::get('login-form', 'LoginController@getFormLogin');
-
-Route::post('signup-form-submit', 'SignUpController@submitFormSignUp');
 //Route Product
 Route::get('home', 'ProductController@getProduct');
 

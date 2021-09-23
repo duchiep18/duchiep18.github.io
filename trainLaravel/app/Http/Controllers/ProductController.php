@@ -36,12 +36,19 @@ class ProductController extends Controller
         // $product = themsanpham::paginate(4);
         return view('admin.pages_danh_muc.ProductPages.products_list', compact('product'));
     }
-    //đổ dl ra web
+    //đổ dl ra trang Home
     public function getProduct(Request $request){
         $query = themsanpham::query();
         $product = $query->paginate(6);
         // $product = themsanpham::paginate(4);
         return view('client.page.home', compact('product'));
+    }
+    //đổ dl ra trang Home sau khi Login
+    public function getProduct_Login(Request $request){
+        $query = themsanpham::query();
+        $product = $query->paginate(6);
+        // $product = themsanpham::paginate(4);
+        return view('client.page.homeLogin', compact('product'));
     }
     //hàm tạo danh mục sản phẩm
     public function productCategories(Request $request){

@@ -1,14 +1,10 @@
 create database XuePC;
 
-
 use XuePC;
-
 
 show tables;
 
-
 desc them_san_pham;
-
 
 select * from posts;
 
@@ -21,5 +17,8 @@ select * from products_categories;
 select * from users;
 
 select * from profile__users;
+
+select * from quanly_taikhoan
+
 
 

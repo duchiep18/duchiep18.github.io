@@ -13,6 +13,8 @@
     <link href="/frontend/css/animate.css" rel="stylesheet">
 	<link href="/frontend/css/main.css" rel="stylesheet">
 	<link href="/frontend/css/responsive.css" rel="stylesheet">
+	
+	
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -65,11 +67,10 @@
 					<div class="col-sm-8">
 						<div class="shop pull-right">
 							<ul class="nav navbar-nav" >
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login"><i class="fa fa-lock"></i> Login</a></li>
+								<li>
+									<a href="{{route ('login.get')}}"><i class="fa fa-lock"></i> Login</a>
+								</li>
 							</ul>
 						</div>
 					</div>

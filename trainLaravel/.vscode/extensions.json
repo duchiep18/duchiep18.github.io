@@ -1,5 +1,8 @@
 {
     "recommendations": [
-        "thekalinga.bootstrap4-vscode"
+        "thekalinga.bootstrap4-vscode",
+        "onecentlin.laravel5-snippets",
+        "wcwhitehead.bootstrap-3-snippets",
+        "onecentlin.laravel-blade"
     ]
 }

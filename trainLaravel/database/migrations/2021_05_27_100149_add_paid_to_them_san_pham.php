@@ -15,7 +15,7 @@ class AddPaidToThemSanPham extends Migration
     {
         Schema::table('them_san_pham', function (Blueprint $table) {
             
-
+            
         });
     }
 
